@@ -1,1 +1,22 @@
+import React from 'react'
+const { render } = require("enzyme");
+
 // your Bomb code here!
+class Bomb extends React.Component {
+
+    constructor(props){
+        super()
+        this.state = { secondsLeft: props.initialCount }
+    }
+    // if (this.state.secondsLeft ==)
+    render(){
+        const message = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`
+        return (
+        <div>{message}</div>
+    )}
+
+
+}
+
+
+export default Bomb
